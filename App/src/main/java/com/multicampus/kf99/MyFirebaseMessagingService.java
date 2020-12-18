@@ -23,7 +23,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         if (remoteMessage.getData().size() > 0) {
             showNotification(remoteMessage.getData().get("title"), remoteMessage.getData().get("message"));
-            Log.e("asdsad", String.valueOf(remoteMessage.getData()));
+            Log.e("key", String.valueOf(remoteMessage.getData()));
         }
 
         if (remoteMessage.getNotification() != null) {
